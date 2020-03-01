@@ -1,5 +1,12 @@
 
 import * as React from 'react';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import AppBar from '@material-ui/core/AppBar';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import Toolbar from '@material-ui/core/Toolbar';
+import MuiLink from '@material-ui/core/Link';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -7,37 +14,47 @@ type LayoutProps = {
   title?: string
 };
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
-
-const linkStyle = {
-  marginRight: 20
-};
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <MuiLink color="inherit" href="ttps://github.com/stepanenko/">
+        Stepanenko GitHub
+      </MuiLink>{' '}
+      {new Date().getFullYear()}
+    </Typography>
+  );
+}
 
 const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => (
-  <div style={layoutStyle}>
+  <div>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a style={linkStyle}>Home</a>
-        </Link>
-        <Link href="/about">
-          <a style={linkStyle}>About</a>
-        </Link>
-        <Link href="/agent">
-          <a style={linkStyle}>Agent</a>
-        </Link>
-      </nav>
-    </header>
-    {children}
+    <Container maxWidth="md">
+      <AppBar position="static">
+        <Toolbar>
+            <Link href="/">
+            <Button color="inherit">Home</Button>
+          </Link>
+          <Link href="/about">
+            <Button color="inherit">About</Button>
+          </Link>
+          <Link href="/agent">
+            <Button color="inherit">Agent</Button>
+          </Link>
+        </Toolbar>
+      </AppBar>
+      <header>
+        <nav>
+          
+        </nav>
+      </header>
+        {children}
+      <Copyright />
+    </Container>
   </div>
 );
 
