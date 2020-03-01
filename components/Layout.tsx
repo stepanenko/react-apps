@@ -3,15 +3,20 @@ import * as React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
-import IconButton from '@material-ui/core/IconButton';
+import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import MuiLink from '@material-ui/core/Link';
 import Link from 'next/link';
 import Head from 'next/head';
+import CSS from 'csstype';
 
 type LayoutProps = {
   title?: string
+};
+
+const paperStyle: CSS.Properties = {
+  padding: '30'
 };
 
 function Copyright() {
@@ -47,13 +52,10 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => (
           </Link>
         </Toolbar>
       </AppBar>
-      <header>
-        <nav>
-          
-        </nav>
-      </header>
+      <Paper square elevation={3}>
         {children}
-      <Copyright />
+        <Copyright />
+      </Paper>
     </Container>
   </div>
 );

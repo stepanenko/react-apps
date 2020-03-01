@@ -1,10 +1,12 @@
 
 import { NextPage } from 'next';
 import Layout from '../components/Layout';
+import CSS from 'csstype';
 
-const agentStyle = {
+const agentStyle: CSS.Properties = {
   color: 'green',
-  fontSize: 24
+  fontSize: '34px',
+  padding: '30px'
 };
 
 const Agent: NextPage<{ userAgent: string }> = ({ userAgent }) => (
