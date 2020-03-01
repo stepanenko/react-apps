@@ -1,16 +1,13 @@
 
-import { NextPage } from 'next';
+import React from 'react';
+import Layout from '../components/Layout';
 
-const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
-  <div>
-    <h1>Hello Next + Typescript</h1>
-    <p>User Agent: {userAgent}</p>
-  </div>
-);
-
-Home.getInitialProps = async ({ req }) => {
-  const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent;
-  return { userAgent };
+const Index: React.FunctionComponent = () => {
+  return (
+    <Layout title="Home">
+      <h1>Hello Next.js</h1>
+    </Layout>
+  );
 };
 
-export default Home;
+export default Index;

@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "keywords": [],
-  "author": "",
+  "author": "stepanenko",
   "license": "ISC",
   "dependencies": {
     "next": "^9.2.2",
