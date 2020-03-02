@@ -1,31 +1,24 @@
 
-import React from 'react';
+import { NextPage } from 'next';
 import Layout from '../components/Layout';
-import Link from 'next/link';
+import CSS from 'csstype';
 
-type PostLinkProps = {
-  title?: string
+const agentStyle: CSS.Properties = {
+  color: 'green',
+  fontSize: '34px',
+  padding: '30px'
 };
 
-const PostLink: React.FunctionComponent<PostLinkProps> = ({ title }) => {
-  return (
-    <li>
-      <Link href={`/post?title=${title}`}>
-        <a>{title}</a>
-      </Link>
-    </li>
-  );
-};
+const About: NextPage<{ userAgent: string }> = ({ userAgent }) => (
+  <Layout>
+    <h1>ABOUT YOUR USER AGENT:</h1>
+    <p style={agentStyle}>{userAgent}</p>
+  </Layout>
+);
 
-const About: React.FunctionComponent = () => {
-  return (
-    <Layout title="About">
-      <h1>This is About page ✌</h1>
-      <PostLink title="Hello Next.js" />
-      <PostLink title="Learn Next.js is awesome" />
-      <PostLink title="Deploy apps with Zeit" />
-    </Layout>
-  );
+About.getInitialProps = async ({ req }) => {
+  const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent;
+  return { userAgent };
 };
 
 export default About;

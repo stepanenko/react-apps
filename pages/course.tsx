@@ -2,17 +2,17 @@
 import { withRouter } from 'next/router';
 import Layout from '../components/Layout';
 
-type PostProps = {
+type CourseProps = {
   router?: any
 };
 
-const Post: React.FunctionComponent<PostProps> = ({ router }) => {
+const Course: React.FunctionComponent<CourseProps> = ({ router }) => {
   return (
     <Layout>
       <h1>{router.query.title}</h1>
-      <p>This is the blog post content.</p>
+      <p>This is a course.</p>
     </Layout>
   );
 };
 
-export default withRouter(Post);
+export default withRouter(Course);

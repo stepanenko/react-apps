@@ -44,11 +44,11 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => (
             <Link href="/">
             <Button color="inherit">Home</Button>
           </Link>
+          <Link href="/courses">
+            <Button color="inherit">Courses</Button>
+          </Link>
           <Link href="/about">
             <Button color="inherit">About</Button>
-          </Link>
-          <Link href="/agent">
-            <Button color="inherit">Agent</Button>
           </Link>
         </Toolbar>
       </AppBar>
