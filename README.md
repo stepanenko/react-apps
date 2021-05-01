@@ -1,7 +1,7 @@
 
 ## NextJS App
 
-*Tech stack:*
+**Tech stack:**
 - React 17
 - Typescript 4.2
 - NextJS 10.2
