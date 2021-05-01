@@ -1,31 +1,31 @@
 
-import * as React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import AppBar from '@material-ui/core/AppBar';
-import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-import Toolbar from '@material-ui/core/Toolbar';
-import MuiLink from '@material-ui/core/Link';
-import Link from 'next/link';
-import Head from 'next/head';
-import CSS from 'csstype';
+import * as React from "react";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
+import AppBar from "@material-ui/core/AppBar";
+import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
+import Toolbar from "@material-ui/core/Toolbar";
+import MuiLink from "@material-ui/core/Link";
+import Link from "next/link";
+import Head from "next/head";
+import CSS from "csstype";
 
 type LayoutProps = {
-  title?: string
+  title?: string;
 };
 
 const paperStyle: CSS.Properties = {
-  padding: '30'
+  padding: "30",
 };
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {"Copyright © "}
       <MuiLink color="inherit" href="ttps://github.com/stepanenko/">
         Stepanenko GitHub
-      </MuiLink>{' '}
+      </MuiLink>{" "}
       {new Date().getFullYear()}
     </Typography>
   );
@@ -41,7 +41,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => (
     <Container maxWidth="md">
       <AppBar position="static">
         <Toolbar>
-            <Link href="/">
+          <Link href="/">
             <Button color="inherit">Home</Button>
           </Link>
           <Link href="/courses">

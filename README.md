@@ -1,5 +1,9 @@
-# NextJS App
 
-React + Typescript + NextJS
+## NextJS App
 
-Updated on 08.10.2020
+*Tech stack:*
+- React 17
+- Typescript 4.2
+- NextJS 10.2
+
+Updated on 01.05.2021

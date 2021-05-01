@@ -1,9 +1,9 @@
 
-import { withRouter } from 'next/router';
-import Layout from '../components/Layout';
+import { withRouter } from "next/router";
+import Layout from "../components/Layout";
 
 type CourseProps = {
-  router?: any
+  router?: any;
 };
 
 const Course: React.FunctionComponent<CourseProps> = ({ router }) => {

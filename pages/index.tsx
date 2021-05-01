@@ -1,8 +1,9 @@
 
-import React from 'react';
-import Layout from '../components/Layout';
-import Button from '@material-ui/core/Button';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import Button from "@material-ui/core/Button";
+
+import Layout from "../components/Layout";
 
 const Index: React.FunctionComponent = () => {
   return (
